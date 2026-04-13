@@ -1,22 +1,24 @@
 package com.complaints.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+@Entity
 public class Complaint {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
+	private int id;
 	
-	double x_coord;
-	double y_coord;
-	String description;
+	private Float xCoord;
+	private Float yCoord;
+	private String description;
 	
-	public Complaint(int id, double x, double y, String description) {
+	public Complaint(int id, Float x, Float y, String description) {
 		this.id = id;
-		this.x_coord = x;
-		this.y_coord = y;
+		this.xCoord = x;
+		this.yCoord = y;
 		this.description = description;
 	}
 	
@@ -29,18 +31,18 @@ public class Complaint {
 		this.id = id;
 	} 
 	
-	public double getXCoord() {
-		return this.x_coord;
+	public float getXCoord() {
+		return this.xCoord;
 	}
-	public void setXCoord(double x) {
-		this.x_coord = x;
+	public void setXCoord(Float x) {
+		this.xCoord = x;
 	}
 	
-	public double getYCoord() {
-		return this.y_coord;
+	public float getYCoord() {
+		return this.yCoord;
 	}
-	public void setYCoord(double y) {
-		this.y_coord = y;
+	public void setYCoord(Float y) {
+		this.yCoord = y;
 	}
 	
 	public String getDescription() {

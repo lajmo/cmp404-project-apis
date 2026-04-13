@@ -1,7 +1,8 @@
-package com.complaints.complaignts_service;
+package com.complaints.complaints_service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import com.complaints.model.ComplaintServices;
 @RequestMapping("/complaints")
 public class ComplaintController {
 	
+	@Autowired
 	private ComplaintServices compService;
 	
 	@GetMapping

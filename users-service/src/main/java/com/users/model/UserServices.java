@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServices{
-	enum Type{regular, admin}
 	
 	@Autowired
 	private UserRepository userRepo;
+	
+	enum Type{regular, admin}
 	
 	public List<User> getUsers(){
 		return userRepo.findAll();
@@ -20,13 +21,7 @@ public class UserServices{
 		return userRepo.findById(id).orElse(null);
 	}
 	
-	public User addRegularUser(User auser) {
-		auser.setType(Type.regular.ordinal());
-		return userRepo.save(auser);
-	}
-	
-	public User addAdminUser(User auser) {
-		auser.setType(Type.admin.ordinal());
+	public User addUser(User auser) {
 		return userRepo.save(auser);
 	}
 	

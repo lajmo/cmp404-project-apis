@@ -1,4 +1,4 @@
-package com.complaints.complaignts_service;
+package com.complaints.complaints_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,13 +8,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.complaingts.complaingts_service", "com.complaingts.model"})
-@EnableJpaRepositories(basePackages = "com.complaingts.model")
-@EntityScan(basePackages = "com.complaingts.model")
-public class ComplaigntsServiceApplication {
+@ComponentScan(basePackages = {"com.complaints.complaints_service", "com.complaints.model"})
+@EnableJpaRepositories(basePackages = "com.complaints.model")
+@EntityScan(basePackages = "com.complaints.model")
+public class ComplaintsServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ComplaigntsServiceApplication.class, args);
+		SpringApplication.run(ComplaintsServiceApplication.class, args);
 	}
 
 }
