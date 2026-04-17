@@ -1,10 +1,10 @@
-package com.accesabilityPoints.accessabilityApi;
+package com.publicService.servceapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AccessabilityApiApplicationTests {
+class ServceapiApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.accesabilityPoints.model;
+package com.publicService.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,8 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class AccessabilityPoint {
-	
+public class PublicService {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;

@@ -1,4 +1,4 @@
-package com.accesabilityPoints.accessabilityApi;
+package com.publicService.servceapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,13 +7,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.accesabilityPoints.accessabilityApi", "com.accesabilityPoints.model"})
-@EnableJpaRepositories(basePackages = "com.accesabilityPoints.model")
-@EntityScan(basePackages = "com.accesabilityPoints.model")
-public class AccessabilityApiApplication {
+@ComponentScan(basePackages = {"com.publicService.servceApi", "com.publicService.model"})
+@EnableJpaRepositories(basePackages = "com.publicService.model")
+@EntityScan(basePackages = "com.publicService.model")
+public class ServceapiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AccessabilityApiApplication.class, args);
+		SpringApplication.run(ServceapiApplication.class, args);
 	}
 
 }
