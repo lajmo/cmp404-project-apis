@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.users.model.User;
+
 @Service
 public class ComplaintServices {
 	
@@ -22,6 +24,17 @@ public class ComplaintServices {
 	public Complaint makeComplaint(Complaint c) {
 		return compRepo.save(c);
 	}
+	
+	public Complaint updateComplaint (Complaint ac) {
+		if(compRepo.existsById(ac.getId())) {
+			compRepo.save(ac);
+			return ac;
+		}
+		else {
+			return null;
+		}
+	}
+
 	
 	public String removeComplaint(int id) {
 		if(compRepo.existsById(id)) {

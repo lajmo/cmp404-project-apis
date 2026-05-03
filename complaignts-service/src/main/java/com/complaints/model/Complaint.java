@@ -14,12 +14,14 @@ public class Complaint {
 	private Float xCoord;
 	private Float yCoord;
 	private String description;
+	private Boolean approved;
 	
-	public Complaint(int id, Float x, Float y, String description) {
+	public Complaint(int id, Float x, Float y, String description, Boolean approved) {
 		this.id = id;
 		this.xCoord = x;
 		this.yCoord = y;
 		this.description = description;
+		this.setApproved(approved);
 	}
 	
 	public Complaint() {}
@@ -50,6 +52,14 @@ public class Complaint {
 	}
 	public void setDescription(String d) {
 		this.description = d;
+	}
+
+	public Boolean getApproved() {
+		return approved;
+	}
+
+	public void setApproved(Boolean approved) {
+		this.approved = approved;
 	}
 	
 }

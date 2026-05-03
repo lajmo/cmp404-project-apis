@@ -12,9 +12,9 @@ public class PublicService {
 	private int id;
 	private Float xCoord;
 	private Float yCoord;
-	private int type;
+	private String type;
 	
-	AccessabilityPoint(int id, Float xcoord, Float ycoord, int type){
+	AccessabilityPoint(int id, Float xcoord, Float ycoord, String type){
 		this.id = id;
 		this.xCoord = xcoord;
 		this.yCoord = ycoord;
@@ -27,7 +27,7 @@ public class PublicService {
 		return this.id;
 	}
 	
-	public int getType() {
+	public String getType() {
 		return this.type;
 	}
 	
@@ -43,7 +43,7 @@ public class PublicService {
 		this.id = id;
 	}
 	
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	
