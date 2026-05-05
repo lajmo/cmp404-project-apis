@@ -28,7 +28,7 @@ function Login({user, userHook}) {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/sessions', {
+      const response = await fetch('http://cmp404-users-service-frhqgtcghkhde4ee.austriaeast-01.azurewebsites.net/sessions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

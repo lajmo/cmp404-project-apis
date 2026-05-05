@@ -1,10 +1,10 @@
 var map, datasource
 document.addEventListener('DOMContentLoaded', function () {
 
-    var complaintsApiUrl = 'http://localhost:8081/complaints';
-    var publicServicesApiUrl = 'http://localhost:8082/publicService';
-    var routeApiUrl = 'http://localhost:8083/routes';
-    var searchApiUrl = 'http://localhost:8083/search';
+    var complaintsApiUrl = 'http://cmp404-complaints-service-c2e9f0e2dzcbdpg4.austriaeast-01.azurewebsites.net/complaints';
+    var publicServicesApiUrl = 'http://cmp404-public-service-g5guhradbtf7g7fj.austriaeast-01.azurewebsites.net/publicService';
+    var routeApiUrl = 'http://cmp404-route-service-ggabgjcqdvd9a4em.austriaeast-01.azurewebsites.net/routes';
+    var searchApiUrl = 'http://cmp404-route-service-ggabgjcqdvd9a4em.austriaeast-01.azurewebsites.net/search';
     var routeWarningDistanceMeters = 75;
     var servicePatchDistanceMeters = 30;
     var complaintsCache = [];
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         authOptions: {
             authType: 'subscriptionKey',
             // THIS IS MY SUBSCRIPTION KEY PLEASE BE CAREFUL WITH IT!! (for azure maps)
-            subscriptionKey: ''
+            subscriptionKey: 'CT7mBaGOBWqBJzJBtcZCRpR12PlJrx3xCk3wmFX3yG3SomtPu5W4JQQJ99CDAC5RqLJ1MK9iAAAgAZMP1RiB'
         }
     });
 
@@ -739,7 +739,7 @@ document.addEventListener('DOMContentLoaded', function () {
             complaintsCache.push(savedComplaint);
         } catch (error) {
             console.error('Error during complaint POST request:', error);
-            alert('Could not submit report. Make sure complaints-service is running on http://localhost:8081 and check the browser console.');
+            alert('Could not submit report. Make sure complaints-service API is running on http://cmp404-complaints-service-c2e9f0e2dzcbdpg4.austriaeast-01.azurewebsites.net and check the browser console.');
             return;
         }
 
