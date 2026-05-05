@@ -23,6 +23,17 @@ public class ComplaintServices {
 		return compRepo.save(c);
 	}
 	
+	public Complaint updateComplaint (Complaint ac) {
+		if(compRepo.existsById(ac.getId())) {
+			compRepo.save(ac);
+			return ac;
+		}
+		else {
+			return null;
+		}
+	}
+
+	
 	public String removeComplaint(int id) {
 		if(compRepo.existsById(id)) {
 			compRepo.deleteById(id);

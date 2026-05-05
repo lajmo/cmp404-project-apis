@@ -3,8 +3,9 @@ package com.publicService.model;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class PublicServiceServices {
 	@Autowired
 	private PublicServiceRepo ServiceRepo;
@@ -14,7 +15,8 @@ public class PublicServiceServices {
 	}
 	
 	public PublicService getPublicService(int id) {
-		return accessabilityRepo.findById(id).orElse(null);
+		//return accessabilityRepo.findById(id).orElse(null);
+		return ServiceRepo.findById(id).orElse(null);
 	}
 	
 	public PublicService createPublicService(PublicService p) {

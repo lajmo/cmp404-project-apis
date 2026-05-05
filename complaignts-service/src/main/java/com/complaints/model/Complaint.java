@@ -9,25 +9,27 @@ import jakarta.persistence.Id;
 public class Complaint {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	
 	private Float xCoord;
 	private Float yCoord;
 	private String description;
+	private Boolean approved;
 	
-	public Complaint(int id, Float x, Float y, String description) {
+	public Complaint(Integer id, Float x, Float y, String description, Boolean approved) {
 		this.id = id;
 		this.xCoord = x;
 		this.yCoord = y;
 		this.description = description;
+		this.setApproved(approved);
 	}
 	
 	public Complaint() {}
 	
-	public int getId() {
+	public Integer getId() {
 		return this.id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	} 
 	
@@ -50,6 +52,14 @@ public class Complaint {
 	}
 	public void setDescription(String d) {
 		this.description = d;
+	}
+
+	public Boolean getApproved() {
+		return approved;
+	}
+
+	public void setApproved(Boolean approved) {
+		this.approved = approved;
 	}
 	
 }

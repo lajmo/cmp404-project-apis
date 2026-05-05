@@ -9,49 +9,49 @@ import jakarta.persistence.Id;
 public class PublicService {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	private Float xCoord;
 	private Float yCoord;
-	private int type;
+	private String type;
 	
-	AccessabilityPoint(int id, Float xcoord, Float ycoord, int type){
+	public PublicService(Integer id, Float xcoord, Float ycoord, String type){
 		this.id = id;
 		this.xCoord = xcoord;
 		this.yCoord = ycoord;
 		this.type = type;
 	}
 	
-	AccessabilityPoint(){}
+	public PublicService(){}
 	
-	public int getId() {
+	public Integer getId() {
 		return this.id;
 	}
 	
-	public int getType() {
+	public String getType() {
 		return this.type;
 	}
 	
-	public Float getX() {
+	public Float getXCoord() {
 		return this.xCoord;
 	}
 	
-	public Float getY() {
+	public Float getYCoord() {
 		return this.yCoord;
 	}
 	
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	
-	public void setX(Float x) {
+	public void setXCoord(Float x) {
 		this.xCoord = x;
 	}
 	
-	public void setY(Float y) {
+	public void setYCoord(Float y) {
 		this.yCoord = y;
 	}
 }

@@ -1,6 +1,7 @@
 package com.users.model;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,10 @@ public class UserServices{
 	
 	public User getUser(int id) {
 		return userRepo.findById(id).orElse(null);
+	}
+
+	public Optional<User> authenticate(String username, String password) {
+		return userRepo.findByUsernameAndPassword(username, password);
 	}
 	
 	public User addUser(User auser) {
